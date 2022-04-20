@@ -46,10 +46,9 @@ body {
     .text {
         text-align: center;
         padding: 0%;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%;
+        bottom: auto;
+        top: 80%;
+        width: auto;
+        padding: 5%;
     }
 }
-
