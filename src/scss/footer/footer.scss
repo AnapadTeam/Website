@@ -1,0 +1,21 @@
+$gray: #d2d2d2 !default;
+
+footer {
+    text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5in;
+
+    @media screen and (max-width: 725px) {
+        text-align: center;
+    }
+
+    color: $gray;
+    font-size: 11pt;
+
+    a:link, a:visited {
+        color: $gray;
+        text-decoration-color: $gray;
+        text-decoration: underline;
+    }
+}
