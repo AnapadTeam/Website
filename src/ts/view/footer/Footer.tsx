@@ -9,7 +9,7 @@ class Footer extends React.Component {
         return <>
             <footer>
                 © {new Date().getFullYear()}{" "}
-                <a href="https://anapad.tech" target="_blank" rel="noreferrer">Anapad Team</a>
+                <a href="https://anapad.tech">Anapad Team</a>
             </footer>
         </>
     }

@@ -58,9 +58,9 @@
         }
 
         #email-button-element-stack {
-            display: grid;
-            justify-items: center;
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .animation-up {
