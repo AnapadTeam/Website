@@ -1,16 +1,20 @@
 import React, { ReactNode, RefObject } from "react"
-import Clipboard from 'clipboard';
+import Clipboard from 'clipboard'
 
 // Import assets
 import imageAnapadIcon from "../../../assets/img/anapad_icon_black.png"
 import imageGithub from "../../../assets/img/github.png"
 import imageEmail from "../../../assets/img/email.png"
-import Footer from "../footer/Footer";
+import Footer from "../footer/Footer"
+
+interface HomeViewState {
+    fadeIn?: boolean;
+}
 
 /**
  * {@link HomeView} is the home view.
  */
-class HomeView extends React.Component {
+class HomeView extends React.Component<any, HomeViewState> {
 
     private readonly riseUpAnimationClass = "animation-up"
     private readonly emailLinkButtonClass = "email"
@@ -19,18 +23,26 @@ class HomeView extends React.Component {
 
     constructor(props: any) {
         super(props)
+        this.state = {
+            fadeIn: false
+        };
         this.emailButton = React.createRef()
         this.emailButtonCopiedTextRef = React.createRef()
+        new Clipboard("#" + this.emailLinkButtonClass)
     }
 
     componentDidMount(): void {
-        new Clipboard("#" + this.emailLinkButtonClass)
+        setTimeout(() => {
+            this.setState(() => ({
+                fadeIn: true
+            }))
+        }, 250)
     }
 
     emailButtonClick(): void {
         let classList = this.emailButtonCopiedTextRef.current?.classList
         if (classList?.contains(this.riseUpAnimationClass)) {
-            return;
+            return
         }
         classList?.add(this.riseUpAnimationClass)
         setTimeout(() => {
@@ -40,7 +52,7 @@ class HomeView extends React.Component {
 
     render(): ReactNode {
         return <>
-            <div id="content-centered">
+            <div id="content-centered" className={this.state.fadeIn ? "fade-in" : ""}>
                 <img id="anapad-icon" src={imageAnapadIcon} alt="Anapad Icon"/>
                 <h1>Model A anapad</h1>
                 <p>
@@ -54,7 +66,7 @@ class HomeView extends React.Component {
                     greater productivity, intuition, and satisfaction, the aim of our device is to provide a more
                     efficient, seamless, and enjoyable user experience.
                 </p>
-                <h3>Coming this December.</h3>
+                <h3>Coming this December</h3>
                 <div id="links">
                     <a id="github" target="_blank" rel="noreferrer" href="https://github.com/AnapadTeam">
                         <img src={imageGithub} alt="Github"/>

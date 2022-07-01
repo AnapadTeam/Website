@@ -1,9 +1,15 @@
+.fade-in {
+    opacity: 1 !important;
+    transition: opacity 0.8s ease-in !important;
+}
+
 #content-centered {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     max-width: 7.5in;
     padding: 0 0.5in;
+    opacity: 0;
 
     @media screen and (max-width: 725px) {
         padding: 0 0.3in;
@@ -42,12 +48,12 @@
     }
 
     #links {
-        a {
-            margin: 0 0.2in;
-        }
-
         img {
             width: 3em;
+        }
+
+        a {
+            margin: 0 0.2in;
         }
 
         button {
@@ -73,13 +79,12 @@
             position: absolute;
             margin: 0;
             padding: 0.075in;
+            width: 0.75in;
 
             font-size: 10pt;
-            line-height: 1em;
             opacity: 0;
-            border: 1px solid black;
-            border-radius: 0.2in;
 
+            transform: translateY(-2em);
             -webkit-transition: all 0.3s ease-in-out;
             -moz-transition: all 0.3s ease-in-out;
             -o-transition: all 0.3s ease-in-out;
