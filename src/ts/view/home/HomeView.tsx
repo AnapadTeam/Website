@@ -54,7 +54,7 @@ class HomeView extends React.Component<any, HomeViewState> {
         return <>
             <div id="content-centered" className={this.state.fadeIn ? "fade-in" : ""}>
                 <img id="anapad-icon" src={imageAnapadIcon} alt="Anapad Icon"/>
-                <h1>Model A anapad</h1>
+                <h1>Model A Anapad</h1>
                 <p>
                     <span id="tab"></span>
                     The computer keyboard and mouse has been the predominant hardware interface for desktop computers
@@ -64,7 +64,7 @@ class HomeView extends React.Component<any, HomeViewState> {
                     consist of a multicolor, multitouch display mounted in a metal housing that approximates the
                     footprint of a traditional keyboard. As we imagine how to innovate the desktop environment for
                     greater productivity, intuition, and satisfaction, the aim of our device is to provide a more
-                    efficient, seamless, and enjoyable user experience.
+                    efficient, seamless, and enjoyable user experience. We call this product an anapad.
                 </p>
                 <h3>Coming this December</h3>
                 <div id="links">
